@@ -179,5 +179,3 @@ AI Generators (with caution): You mentioned a lack of success, but the tech is i
 Kenney.nl: Kenney offers a huge collection of high-quality game assets, many of which are in the public domain. They are a staple of indie game development for a reason.
 
 By combining asset packs from these sources, you can create a visually coherent style without having to draw a single pixel yourself.
-
-This is a phenomenal concept with a ton of potential. By breaking it down into manageable chunks and focusing on a solid core loop first, you can absolutely bring this world to life. Good luck!
