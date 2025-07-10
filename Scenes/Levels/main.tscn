@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://n7vviyv2lvo1"]
+[gd_scene load_steps=2 format=3 uid="uid://n7vviyv2lvo1"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://chneaiajeygxg" path="res://Scenes/Entities/Player/Player.tscn" id="1_s0gyx"]
+
+[node name="Node2D" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270209, 0.582809, 0.62523, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_s0gyx")]
+position = Vector2(997, 510)
