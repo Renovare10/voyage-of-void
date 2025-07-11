@@ -5,7 +5,7 @@ const ZOOM_SPEED = 0.1
 const MIN_ZOOM = 0.6
 const MAX_ZOOM = 4.0
 
-var PAN_SPEED = 1.0 # Made var for export
+var PAN_SPEED = 1.0
 var PAN_LIMIT_X = 1000 # Max distance from center on X-axis
 var PAN_LIMIT_Y = 500 # Max distance from center on Y-axis
 
