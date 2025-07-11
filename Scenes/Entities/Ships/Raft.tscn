@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://c0re8ly71h1gf"]
 
-[ext_resource type="Texture2D" uid="uid://b5e62rsjsou16" path="res://Assets/Images/Tilesets/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Floor/Floor - all.png" id="1_o1l7g"]
-[ext_resource type="Texture2D" uid="uid://d1uoklk0j43te" path="res://Assets/Images/Tilesets/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Structure/Structure.png" id="2_g6gvr"]
+[ext_resource type="Texture2D" uid="uid://b5e62rsjsou16" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Floor/Floor - all.png" id="1_o1l7g"]
+[ext_resource type="Texture2D" uid="uid://d1uoklk0j43te" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Structure/Structure.png" id="2_g6gvr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c04mc"]
 texture = ExtResource("1_o1l7g")
