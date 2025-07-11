@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f8rxnqao6lco"
-path="res://.godot/imported/spritesheet_tiles.png-9cef9ddd18b62bf80a15ce7c8356ec36.ctex"
+uid="uid://deh3k8vl18gcp"
+path="res://.godot/imported/cabinet.png-bb5efcce7089ec3653e015b24f8608f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Tilesets/spritesheet_tiles.png"
-dest_files=["res://.godot/imported/spritesheet_tiles.png-9cef9ddd18b62bf80a15ce7c8356ec36.ctex"]
+source_file="res://Assets/Images/Tilesets/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Props/cabinet.png"
+dest_files=["res://.godot/imported/cabinet.png-bb5efcce7089ec3653e015b24f8608f7.ctex"]
 
 [params]
 
