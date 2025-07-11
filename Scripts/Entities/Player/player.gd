@@ -7,7 +7,7 @@ var target_position = position
 func _ready() -> void:
 	target_position = global_position
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Calculate the direction vector from the current position to the target position
 	var direction: Vector2 = target_position - global_position
 
