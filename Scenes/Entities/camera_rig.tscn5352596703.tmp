@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://booqoluo75hw7"]
+
+[ext_resource type="Script" uid="uid://ce6n8rm81kp84" path="res://Scripts/Entities/Camera_Controller.gd" id="1_ct37i"]
+[ext_resource type="PackedScene" uid="uid://c0re8ly71h1gf" path="res://Scenes/Entities/Ships/Raft.tscn" id="2_pbbr8"]
+
+[node name="CameraRig" type="Camera2D"]
+script = ExtResource("1_ct37i")
+
+[node name="Raft" parent="." instance=ExtResource("2_pbbr8")]
