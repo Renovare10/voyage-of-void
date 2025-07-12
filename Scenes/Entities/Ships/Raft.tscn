@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://c0re8ly71h1gf"]
+[gd_scene load_steps=8 format=4 uid="uid://c0re8ly71h1gf"]
 
 [ext_resource type="Texture2D" uid="uid://b5e62rsjsou16" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Floor/Floor - all.png" id="1_o1l7g"]
 [ext_resource type="Texture2D" uid="uid://d1uoklk0j43te" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Structure/Structure.png" id="2_g6gvr"]
@@ -39,6 +39,24 @@ texture = ExtResource("1_o1l7g")
 [sub_resource type="TileSet" id="TileSet_c04mc"]
 sources/5 = SubResource("TileSetAtlasSource_c04mc")
 
+[sub_resource type="GDScript" id="GDScript_o1l7g"]
+script/source = "extends TileMapLayer
+
+@export var walkable_area: Rect2 = Rect2(-100, -50, 200, 100)
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func get_walkable_area() -> Rect2:
+	return walkable_area
+"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mnhbi"]
 texture = ExtResource("2_g6gvr")
 0:0/0 = 0
@@ -66,11 +84,10 @@ texture = ExtResource("2_g6gvr")
 [sub_resource type="TileSet" id="TileSet_nunmo"]
 sources/2 = SubResource("TileSetAtlasSource_mnhbi")
 
-[node name="Raft" type="Node"]
-
-[node name="Floor" type="TileMapLayer" parent="."]
+[node name="Raft" type="TileMapLayer"]
 tile_map_data = PackedByteArray("AAAAAAAABQABAAEAAAAAAAEABQABAAEAAAABAAEABQABAAEAAAABAAAABQABAAEAAAD//wAABQABAAEAAAD//wEABQABAAEAAAABAAIABQABAAEAAAD//wIABQABAAEAAAAAAAIABQABAAEAAAD+/wAABQABAAEAAAD+/wEABQABAAEAAAD+/wIABQABAAEAAAD9/wIABQABAAEAAAD9/wEABQABAAEAAAD9/wAABQABAAEAAAACAAEABQACAAEAAAACAAAABQACAAEAAAACAAIABQACAAEAAAACAAMABQACAAIAAAD9/wMABQABAAIAAAD+/wMABQABAAIAAAD//wMABQABAAIAAAAAAAMABQABAAIAAAABAAMABQABAAIAAAD8/wMABQAAAAIAAAD8/wAABQAAAAEAAAD8/wEABQAAAAEAAAD8/wIABQAAAAEAAAD8////BQAAAAAAAAD9////BQABAAAAAAD+////BQABAAAAAAD/////BQABAAAAAAAAAP//BQABAAAAAAABAP//BQABAAAAAAACAP//BQACAAAAAAA=")
 tile_set = SubResource("TileSet_c04mc")
+script = SubResource("GDScript_o1l7g")
 
 [node name="Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAACAAAAAgAAAAEAAAACAAEAAgAAAAEAAAACAAIAAgAAAAEAAAACAP//AgAEAAAAAAABAP//AgABAAIAAAD9////AgABAAIAAAD+////AgABAAIAAAD/////AgABAAIAAAAAAP//AgABAAIAAAD8////AgADAAAAAAD8/wAAAgACAAEAAAD8/wEAAgACAAEAAAD8/wIAAgACAAEAAAD8/wMAAgADAAEAAAD9/wMAAgABAAAAAAD+/wMAAgABAAAAAAD//wMAAgABAAAAAAAAAAMAAgABAAAAAAABAAMAAgABAAAAAAACAAMAAgAEAAEAAAA=")

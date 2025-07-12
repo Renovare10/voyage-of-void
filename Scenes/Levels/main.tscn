@@ -1,16 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://n7vviyv2lvo1"]
+[gd_scene load_steps=5 format=3 uid="uid://n7vviyv2lvo1"]
 
 [ext_resource type="PackedScene" uid="uid://chneaiajeygxg" path="res://Scenes/Entities/Player/Player.tscn" id="1_s0gyx"]
+[ext_resource type="PackedScene" uid="uid://booqoluo75hw7" path="res://Scenes/Entities/camera_rig.tscn" id="1_u872a"]
+[ext_resource type="PackedScene" uid="uid://c0re8ly71h1gf" path="res://Scenes/Entities/Ships/Raft.tscn" id="2_yjsus"]
+
+[sub_resource type="Environment" id="Environment_u872a"]
+background_mode = 1
+background_color = Color(0.270588, 0.584314, 0.623529, 1)
 
 [node name="Node2D" type="Node"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.270209, 0.582809, 0.62523, 1)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u872a")
 
-[node name="Player" parent="." instance=ExtResource("1_s0gyx")]
-position = Vector2(997, 510)
+[node name="CameraRig" parent="." instance=ExtResource("1_u872a")]
+
+[node name="Raft" parent="." instance=ExtResource("2_yjsus")]
+script = null
+
+[node name="Player" parent="Raft" instance=ExtResource("1_s0gyx")]
+position = Vector2(-6, 23)
+speed = 100.0
+raft_walkable_area = Rect2(-50, 0, 85, 47)
