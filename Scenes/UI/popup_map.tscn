@@ -19,6 +19,8 @@ texture = ExtResource("1_oswvu")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 554.0
+offset_top = 520.0
+offset_right = 604.0
+offset_bottom = 570.0
 theme = SubResource("Theme_oswvu")
