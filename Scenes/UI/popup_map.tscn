@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://btmqw4e6x26br"]
+[gd_scene load_steps=3 format=3 uid="uid://dbny3pk8pwv6t"]
 
 [ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
+
+[sub_resource type="Theme" id="Theme_oswvu"]
 
 [node name="PopupMap" type="Control"]
 layout_mode = 3
@@ -14,3 +16,9 @@ grow_vertical = 2
 position = Vector2(962, 538)
 scale = Vector2(4.19531, 4.19531)
 texture = ExtResource("1_oswvu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = SubResource("Theme_oswvu")
