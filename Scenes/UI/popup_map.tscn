@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://btmqw4e6x26br"]
+
+[ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
+
+[node name="PopupMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PirateMap" type="Sprite2D" parent="."]
+position = Vector2(962, 538)
+scale = Vector2(4.19531, 4.19531)
+texture = ExtResource("1_oswvu")
