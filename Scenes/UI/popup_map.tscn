@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dbny3pk8pwv6t"]
 
 [ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
-
-[sub_resource type="Theme" id="Theme_oswvu"]
+[ext_resource type="Theme" uid="uid://cpcjvgwmtm6nn" path="res://Resources/Themes/default.tres" id="2_b2tc0"]
 
 [node name="PopupMap" type="Control"]
 layout_mode = 3
@@ -17,10 +16,21 @@ position = Vector2(962, 538)
 scale = Vector2(4.19531, 4.19531)
 texture = ExtResource("1_oswvu")
 
+[node name="btn_nassau_hook" type="Button" parent="."]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 540.0
+offset_right = 628.0
+offset_bottom = 590.0
+theme = ExtResource("2_b2tc0")
+text = "Nassau Hook"
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 554.0
-offset_top = 520.0
-offset_right = 604.0
-offset_bottom = 570.0
-theme = SubResource("Theme_oswvu")
+offset_left = 989.0
+offset_top = 682.0
+offset_right = 1137.0
+offset_bottom = 730.0
+theme = ExtResource("2_b2tc0")
+text = "Royal Anchorage
+"
