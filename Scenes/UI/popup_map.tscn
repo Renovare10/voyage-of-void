@@ -18,14 +18,14 @@ position = Vector2(962, 538)
 scale = Vector2(4.19531, 4.19531)
 texture = ExtResource("1_oswvu")
 
-[node name="btn_nassau_hook" type="Button" parent="."]
+[node name="btn_saltwick" type="Button" parent="."]
 layout_mode = 0
-offset_left = 524.0
-offset_top = 540.0
-offset_right = 628.0
-offset_bottom = 590.0
+offset_left = 526.0
+offset_top = 532.0
+offset_right = 630.0
+offset_bottom = 582.0
 theme = ExtResource("2_b2tc0")
-text = "Nassau Hook"
+text = "Saltwick"
 
 [node name="btn_royal_anchorage" type="Button" parent="."]
 layout_mode = 0
