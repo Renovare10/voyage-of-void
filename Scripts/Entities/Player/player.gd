@@ -28,8 +28,6 @@ func _input(event: InputEvent) -> void:
 	if map_popup and map_popup.visible:  # if popup map is open, don't move
 		return
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_viewport().gui_get_tooltip().count > 0:
-			return
 		if get_parent():
 			target_local_position = get_parent().to_local(get_global_mouse_position())
 		else:
