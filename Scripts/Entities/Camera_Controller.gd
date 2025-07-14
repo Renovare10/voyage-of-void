@@ -13,6 +13,8 @@ var panning = false
 var pan_start_position = Vector2.ZERO
 var camera_start_position = Vector2.ZERO
 
+@onready var map_popup: Control = get_tree().current_scene.find_child("PopupMap", true, false)
+
 func _ready():
 	set_process_input(true)
 
@@ -24,7 +26,7 @@ func _input(event):
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			zoom.x = max(zoom.x - ZOOM_SPEED, MIN_ZOOM)
 			zoom.y = max(zoom.y - ZOOM_SPEED, MIN_ZOOM)
-		elif event.button_index == MOUSE_BUTTON_MIDDLE:
+		elif event.button_index == MOUSE_BUTTON_MIDDLE and not map_popup.visible:
 			if event.pressed:
 				panning = true
 				pan_start_position = event.position
