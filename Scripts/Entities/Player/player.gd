@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 @export var speed: float = 300.0
 @export var movement_threshold: float = 5.0
-
 @export var raft_walkable_area: Rect2 = Rect2(-100, -50, 200, 100)
-
 var target_local_position: Vector2
+
+@onready var map_popup: Control = get_tree().current_scene.find_child("PopupMap", true, false)
 
 func _ready() -> void:
 	target_local_position = position
@@ -25,8 +25,9 @@ func _physics_process(_delta: float) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if map_popup and map_popup.visible:  # if popup map is open, don't move
+		return
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		# Check if the mouse click is over any UI element and stop it
 		if get_viewport().gui_get_tooltip().count > 0:
 			return
 		if get_parent():
