@@ -1,7 +1,7 @@
 extends Node
 
 @export var cities: Array[CityData] = []  # Populate in Inspector: add CityData instances
-var current_city_name: String = "StartingIsland"
+var current_city_name: String = "Saltwick"
 
 func get_city_position(city_name: String) -> Vector2:
 	for city in cities:
