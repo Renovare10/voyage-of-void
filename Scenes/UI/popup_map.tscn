@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbny3pk8pwv6t"]
+[gd_scene load_steps=4 format=3 uid="uid://dbny3pk8pwv6t"]
 
 [ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
+[ext_resource type="Script" uid="uid://c20q0seuryxgs" path="res://Scripts/UI/popup_map.gd" id="1_t6ckv"]
 [ext_resource type="Theme" uid="uid://cpcjvgwmtm6nn" path="res://Resources/Themes/default.tres" id="2_b2tc0"]
 
 [node name="PopupMap" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t6ckv")
 
 [node name="PirateMap" type="Sprite2D" parent="."]
 position = Vector2(962, 538)

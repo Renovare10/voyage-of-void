@@ -26,6 +26,9 @@ func _physics_process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		# Check if the mouse click is over any UI element and stop it
+		if get_viewport().gui_get_tooltip().count > 0:
+			return
 		if get_parent():
 			target_local_position = get_parent().to_local(get_global_mouse_position())
 		else:

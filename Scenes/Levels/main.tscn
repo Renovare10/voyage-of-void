@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://n7vviyv2lvo1"]
+[gd_scene load_steps=6 format=3 uid="uid://n7vviyv2lvo1"]
 
 [ext_resource type="PackedScene" uid="uid://chneaiajeygxg" path="res://Scenes/Entities/Player/Player.tscn" id="1_s0gyx"]
 [ext_resource type="PackedScene" uid="uid://booqoluo75hw7" path="res://Scenes/Entities/camera_rig.tscn" id="1_u872a"]
 [ext_resource type="PackedScene" uid="uid://c0re8ly71h1gf" path="res://Scenes/Entities/Ships/Raft.tscn" id="2_yjsus"]
+[ext_resource type="PackedScene" uid="uid://dbny3pk8pwv6t" path="res://Scenes/UI/popup_map.tscn" id="4_nk5xi"]
 
 [sub_resource type="Environment" id="Environment_u872a"]
 background_mode = 1
@@ -13,8 +14,6 @@ background_color = Color(0.270588, 0.584314, 0.623529, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_u872a")
 
-[node name="CameraRig" parent="." instance=ExtResource("1_u872a")]
-
 [node name="Raft" parent="." instance=ExtResource("2_yjsus")]
 script = null
 
@@ -22,3 +21,11 @@ script = null
 position = Vector2(-6, 23)
 speed = 100.0
 raft_walkable_area = Rect2(-50, 0, 85, 47)
+
+[node name="CameraRig" parent="." instance=ExtResource("1_u872a")]
+
+[node name="PopupMap" parent="CameraRig" instance=ExtResource("4_nk5xi")]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
