@@ -14,3 +14,7 @@ func _process(_delta: float) -> void:
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_map_toggle"):
 		map_ui_element.visible = not map_ui_element.visible
+
+
+func _on_btn_saltwick_pressed() -> void:
+	pass # Replace with function body.
