@@ -7,6 +7,8 @@
 
 [node name="Node2D" type="Node"]
 
+[node name="EventContainer" type="Node" parent="."]
+
 [node name="Raft" parent="." instance=ExtResource("2_yjsus")]
 script = null
 
