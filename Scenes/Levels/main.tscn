@@ -14,7 +14,9 @@
 [node name="Saltwick" parent="LocationContainer" instance=ExtResource("5_7i1ub")]
 
 [node name="Raft" parent="." instance=ExtResource("2_yjsus")]
+position = Vector2(6, -23)
 script = null
+metadata/_edit_group_ = true
 
 [node name="Player" parent="Raft" instance=ExtResource("1_s0gyx")]
 position = Vector2(-6, 23)
