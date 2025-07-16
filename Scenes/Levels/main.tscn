@@ -22,6 +22,7 @@ speed = 100.0
 raft_walkable_area = Rect2(-50, 0, 85, 47)
 
 [node name="CameraRig" parent="." instance=ExtResource("1_u872a")]
+zoom = Vector2(1.7, 1.7)
 
 [node name="PopupMap" parent="CameraRig" instance=ExtResource("4_nk5xi")]
 visible = false
