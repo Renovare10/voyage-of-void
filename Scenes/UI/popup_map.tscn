@@ -38,3 +38,4 @@ text = "Royal Anchorage
 "
 
 [connection signal="pressed" from="btn_saltwick" to="." method="_on_btn_saltwick_pressed"]
+[connection signal="pressed" from="btn_royal_anchorage" to="." method="_on_btn_royal_anchorage_pressed"]
