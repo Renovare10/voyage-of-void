@@ -3,9 +3,12 @@ extends CharacterBody2D
 @export var speed: float = 300.0
 @export var movement_threshold: float = 5.0
 @export var raft_walkable_area: Rect2 = Rect2(-100, -50, 200, 100)
+
 var target_local_position: Vector2
 
 @onready var map_popup: Control = get_tree().current_scene.find_child("PopupMap", true, false)
+
+var selected: bool = false
 
 func _ready() -> void:
 	target_local_position = position
@@ -23,12 +26,20 @@ func _physics_process(_delta: float) -> void:
 	position.x = clamp(position.x, raft_walkable_area.position.x, raft_walkable_area.position.x + raft_walkable_area.size.x)
 	position.y = clamp(position.y, raft_walkable_area.position.y, raft_walkable_area.position.y + raft_walkable_area.size.y)
 
-
 func _input(event: InputEvent) -> void:
-	if map_popup and map_popup.visible:  # if popup map is open, don't move
+	if map_popup and map_popup.visible:
 		return
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_parent():
-			target_local_position = get_parent().to_local(get_global_mouse_position())
-		else:
-			target_local_position = get_global_mouse_position()
+	
+	if event is InputEventMouseButton and event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			# Simple selection: Check if click is on player (use collision or distance)
+			var mouse_pos = get_global_mouse_position()
+			if (mouse_pos - global_position).length() < 20:  # Adjust threshold for "on player"
+				selected = true
+			else:
+				selected = false  # Deselect if clicking elsewhere
+		elif event.button_index == MOUSE_BUTTON_RIGHT and selected:
+			if get_parent():
+				target_local_position = get_parent().to_local(get_global_mouse_position())
+			else:
+				target_local_position = get_global_mouse_position()
