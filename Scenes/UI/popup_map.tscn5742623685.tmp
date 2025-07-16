@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbny3pk8pwv6t"]
+
+[ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
+[ext_resource type="Script" uid="uid://c20q0seuryxgs" path="res://Scripts/UI/popup_map.gd" id="1_t6ckv"]
+[ext_resource type="Theme" uid="uid://cpcjvgwmtm6nn" path="res://Resources/Themes/default.tres" id="2_b2tc0"]
+
+[node name="PopupMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6ckv")
+
+[node name="PirateMap" type="Sprite2D" parent="."]
+position = Vector2(962, 538)
+scale = Vector2(4.19531, 4.19531)
+texture = ExtResource("1_oswvu")
+
+[node name="btn_saltwick" type="Button" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 532.0
+offset_right = 630.0
+offset_bottom = 582.0
+theme = ExtResource("2_b2tc0")
+text = "Saltwick"
+
+[node name="btn_royal_anchorage" type="Button" parent="."]
+layout_mode = 0
+offset_left = 989.0
+offset_top = 682.0
+offset_right = 1137.0
+offset_bottom = 730.0
+theme = ExtResource("2_b2tc0")
+text = "Royal Anchorage
+"
+
+[connection signal="pressed" from="btn_saltwick" to="." method="_on_btn_saltwick_pressed"]
