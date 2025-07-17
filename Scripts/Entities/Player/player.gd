@@ -5,7 +5,7 @@ enum State { IDLE, SELECTED, MOVING }
 var state: State = State.IDLE
 @export var speed: float = 65.0
 @export var movement_threshold: float = 1.0
-@export var raft_walkable_area: Rect2 = Rect2(-100, -50, 200, 100)
+var raft_walkable_area: Rect2
 var target_local_position: Vector2
 
 @onready var map_popup: Control = get_tree().current_scene.find_child("PopupMap", true, false)
@@ -13,11 +13,17 @@ var target_local_position: Vector2
 
 func _ready() -> void:
 	target_local_position = position
+	var area: Area2D = get_parent().get_node("WalkableArea")
+	var shape_node: CollisionShape2D = area.get_node("CollisionShape2D")
+	var shape: RectangleShape2D = shape_node.shape
+	var pos: Vector2 = area.position + shape_node.position - shape.extents
+	var size: Vector2 = shape.extents * 2
+	raft_walkable_area = Rect2(pos, size)
 	if click_area:
 		click_area.input_event.connect(_on_click_area_input_event)
 
 func _input(event: InputEvent) -> void:
-	if map_popup and map_popup.visible:  # Skip if popup open
+	if map_popup and map_popup.visible:
 		return
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == MOUSE_BUTTON_RIGHT and (state == State.SELECTED or state == State.MOVING):
@@ -34,11 +40,11 @@ func _physics_process(_delta: float) -> void:
 			velocity = direction.normalized() * speed
 		else:
 			velocity = Vector2.ZERO
-			position = target_local_position  # Snap exact on close
-			state = State.SELECTED  # Stay selected
+			position = target_local_position
+			state = State.SELECTED
 		move_and_slide()
-		position.x = clamp(position.x, raft_walkable_area.position.x, raft_walkable_area.position.x + raft_walkable_area.size.x)
-		position.y = clamp(position.y, raft_walkable_area.position.y, raft_walkable_area.position.y + raft_walkable_area.size.y)
+		position.x = clamp(position.x, raft_walkable_area.position.x, raft_walkable_area.end.x)
+		position.y = clamp(position.y, raft_walkable_area.position.y, raft_walkable_area.end.y)
 
 func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
