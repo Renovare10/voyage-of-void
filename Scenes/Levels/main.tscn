@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://chneaiajeygxg" path="res://Scenes/Entities/Player/Player.tscn" id="1_s0gyx"]
 [ext_resource type="PackedScene" uid="uid://booqoluo75hw7" path="res://Scenes/Entities/camera_rig.tscn" id="1_u872a"]
 [ext_resource type="PackedScene" uid="uid://c0re8ly71h1gf" path="res://Scenes/Entities/Ships/Raft.tscn" id="2_yjsus"]
-[ext_resource type="PackedScene" uid="uid://dbny3pk8pwv6t" path="res://Scenes/UI/popup_map.tscn" id="4_nk5xi"]
+[ext_resource type="PackedScene" uid="uid://btmqw4e6x26br" path="res://Scenes/UI/popup_map.tscn" id="4_nk5xi"]
 [ext_resource type="PackedScene" uid="uid://dm1a228uyl1rg" path="res://Scenes/Levels/Saltwick.tscn" id="5_7i1ub"]
 [ext_resource type="PackedScene" uid="uid://de2t2dkqgq721" path="res://Scenes/Levels/royal_anchorage.tscn" id="6_w0lsm"]
 
