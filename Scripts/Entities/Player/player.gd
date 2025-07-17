@@ -3,9 +3,9 @@ extends CharacterBody2D
 enum State { IDLE, SELECTED, MOVING }
 
 var state: State = State.IDLE
-@export var speed: float = 65.0  # Your tweak
-@export var movement_threshold: float = 1.0  # Reduced for closer arrive
-@export var raft_walkable_area: Rect2 = Rect2(-100, -50, 200, 100)  # Adjust later
+@export var speed: float = 65.0
+@export var movement_threshold: float = 1.0
+@export var raft_walkable_area: Rect2 = Rect2(-100, -50, 200, 100)
 var target_local_position: Vector2
 
 @onready var map_popup: Control = get_tree().current_scene.find_child("PopupMap", true, false)
@@ -23,11 +23,9 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_RIGHT and (state == State.SELECTED or state == State.MOVING):
 			target_local_position = get_parent().to_local(get_global_mouse_position())
 			state = State.MOVING
-			print("Moving to: ", target_local_position)  # Debug
 		elif event.button_index == MOUSE_BUTTON_LEFT and state == State.SELECTED:
 			state = State.IDLE
 			modulate = Color.WHITE
-			print("Deselected via click away")
 
 func _physics_process(_delta: float) -> void:
 	if state == State.MOVING:
@@ -38,7 +36,6 @@ func _physics_process(_delta: float) -> void:
 			velocity = Vector2.ZERO
 			position = target_local_position  # Snap exact on close
 			state = State.SELECTED  # Stay selected
-			print("Arrived at: ", position, " (target was: ", target_local_position, ")")  # Debug match
 		move_and_slide()
 		position.x = clamp(position.x, raft_walkable_area.position.x, raft_walkable_area.position.x + raft_walkable_area.size.x)
 		position.y = clamp(position.y, raft_walkable_area.position.y, raft_walkable_area.position.y + raft_walkable_area.size.y)
@@ -49,12 +46,9 @@ func _on_click_area_input_event(viewport: Viewport, event: InputEvent, shape_idx
 			if state != State.SELECTED:
 				state = State.SELECTED
 				modulate = Color.GREEN
-				print("Player selected!")
 			else:
 				state = State.IDLE
 				modulate = Color.WHITE
-				print("Deselected on player")
 		elif event.button_index == MOUSE_BUTTON_RIGHT and (state == State.SELECTED or state == State.MOVING):
 			target_local_position = get_parent().to_local(get_global_mouse_position())
 			state = State.MOVING
-			print("Moving to (self click): ", target_local_position)  # Debug cancel on self
