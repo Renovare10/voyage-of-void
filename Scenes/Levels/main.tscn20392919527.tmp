@@ -23,6 +23,9 @@ position = Vector2(-6, 23)
 
 [node name="CameraRig" parent="." instance=ExtResource("1_u872a")]
 zoom = Vector2(1.7, 1.7)
+speed = null
+movement_threshold = null
+raft_walkable_area = null
 
 [node name="PopupMap" parent="CameraRig" instance=ExtResource("4_nk5xi")]
 visible = false

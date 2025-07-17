@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dagmlk3xvl8dm" path="res://Scripts/Entities/Player/player.gd" id="1_qer5h"]
 [ext_resource type="Texture2D" uid="uid://bhv72xsfffvi5" path="res://Assets/Images/Characters/Walk Down.png" id="2_qer5h"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_akw4a"]
+radius = 8.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qer5h"]
 atlas = ExtResource("2_qer5h")
 region = Rect2(4, 4, 16, 18)
@@ -95,17 +98,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_akw4a"]
-radius = 23.0
-
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(562, 325)
 script = ExtResource("1_qer5h")
 metadata/_edit_group_ = true
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("CircleShape2D_akw4a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pmdnf")
 speed_scale = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_akw4a")
