@@ -1,0 +1,117 @@
+[gd_scene load_steps=17 format=3 uid="uid://c6evv56odppty"]
+
+[ext_resource type="Texture2D" uid="uid://bhv72xsfffvi5" path="res://Assets/Images/Characters/Walk Down.png" id="2_lcd3w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qer5h"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_akw4a"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qer5h"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(4, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmdnf"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(28, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akw4a"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(52, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm67w"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(76, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84utv"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(100, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi4ft"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(124, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgr12"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(148, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa30k"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(172, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_446ba"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(196, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xboxw"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(220, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh528"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(244, 4, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj0bi"]
+atlas = ExtResource("2_lcd3w")
+region = Rect2(268, 4, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pmdnf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qer5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmdnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akw4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm67w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84utv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi4ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgr12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa30k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_446ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xboxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh528")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uj0bi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qer5h")
+debug_color = Color(0.967168, 0, 0.475959, 0.42)
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("CircleShape2D_akw4a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pmdnf")
+speed_scale = 0.0
