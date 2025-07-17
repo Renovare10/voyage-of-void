@@ -1,7 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://chneaiajeygxg"]
+[gd_scene load_steps=18 format=3 uid="uid://chneaiajeygxg"]
 
 [ext_resource type="Script" uid="uid://dagmlk3xvl8dm" path="res://Scripts/Entities/Player/player.gd" id="1_qer5h"]
 [ext_resource type="Texture2D" uid="uid://bhv72xsfffvi5" path="res://Assets/Images/Characters/Walk Down.png" id="2_qer5h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qer5h"]
+radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_akw4a"]
 radius = 8.0
@@ -101,6 +104,10 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_qer5h")
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qer5h")
+debug_color = Color(0.967168, 0, 0.475959, 0.42)
 
 [node name="ClickArea" type="Area2D" parent="."]
 
