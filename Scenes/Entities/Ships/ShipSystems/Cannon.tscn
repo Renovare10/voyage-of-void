@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfprktm6sv5ds"]
+[gd_scene load_steps=3 format=3 uid="uid://dfprktm6sv5ds"]
 
 [ext_resource type="Texture2D" uid="uid://bvxd2cknxjmlx" path="res://Assets/Images/Props/cannon.png" id="1_st1wk"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_st1wk"]
+size = Vector2(29, 20)
+
 [node name="Cannon" type="Sprite2D"]
 texture = ExtResource("1_st1wk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -19.0
+offset_top = -2.0
+offset_right = -15.0
+offset_bottom = 2.0
+color = Color(1, 1, 1, 0.203922)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-19, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.5, 1)
+shape = SubResource("RectangleShape2D_st1wk")
