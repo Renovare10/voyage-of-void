@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://boqfddrphm3k8"]
 
 [ext_resource type="Texture2D" uid="uid://ktjo6vp3ihm5" path="res://Assets/Images/Props/steering wheel.png" id="1_bccbg"]
-[ext_resource type="Script" path="res://Scripts/Entities/cannon.gd" id="2_50rxi"]
+[ext_resource type="Script" uid="uid://cddfjfi6unoqw" path="res://Scripts/Entities/cannon.gd" id="2_50rxi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bccbg"]
 size = Vector2(33, 26)
