@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://c0re8ly71h1gf"]
+[gd_scene load_steps=10 format=4 uid="uid://c0re8ly71h1gf"]
 
 [ext_resource type="Texture2D" uid="uid://b5e62rsjsou16" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Floor/Floor - all.png" id="1_o1l7g"]
 [ext_resource type="Script" uid="uid://cg0ge463vsq36" path="res://Scripts/Entities/raft.gd" id="2_c04mc"]
 [ext_resource type="Texture2D" uid="uid://d1uoklk0j43te" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Structure/Structure.png" id="2_g6gvr"]
+[ext_resource type="PackedScene" uid="uid://dfprktm6sv5ds" path="res://Scenes/Entities/Ships/ShipSystems/Cannon.tscn" id="4_c04mc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c04mc"]
 texture = ExtResource("1_o1l7g")
@@ -84,3 +85,6 @@ tile_set = SubResource("TileSet_nunmo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WalkableArea"]
 position = Vector2(-8, 19)
 shape = SubResource("RectangleShape2D_o1l7g")
+
+[node name="Cannon" parent="." instance=ExtResource("4_c04mc")]
+position = Vector2(45, 21)
