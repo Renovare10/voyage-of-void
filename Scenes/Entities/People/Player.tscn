@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://chneaiajeygxg"]
+[gd_scene load_steps=19 format=3 uid="uid://chneaiajeygxg"]
 
 [ext_resource type="Script" uid="uid://dagmlk3xvl8dm" path="res://Scripts/Entities/Player/player.gd" id="1_qer5h"]
 [ext_resource type="Texture2D" uid="uid://bhv72xsfffvi5" path="res://Assets/Images/Characters/Walk Down.png" id="2_qer5h"]
+[ext_resource type="PackedScene" uid="uid://8iyd6ruka2x7" path="res://Scenes/Entities/Components/ManningComponent.tscn" id="3_vmryp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qer5h"]
 radius = 8.0
@@ -117,3 +118,5 @@ shape = SubResource("CircleShape2D_akw4a")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pmdnf")
 speed_scale = 0.0
+
+[node name="ManningComponent" parent="." instance=ExtResource("3_vmryp")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://btmqw4e6x26br"]
+[gd_scene load_steps=4 format=3 uid="uid://dbny3pk8pwv6t"]
 
 [ext_resource type="Texture2D" uid="uid://wjbbcigub5mk" path="res://Assets/Images/UI/pirate map.png" id="1_oswvu"]
 [ext_resource type="Script" uid="uid://c20q0seuryxgs" path="res://Scripts/UI/popup_map.gd" id="1_t6ckv"]

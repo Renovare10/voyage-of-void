@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://n8mioilvfkr0"]
+[gd_scene load_steps=12 format=4 uid="uid://clk2rn4ehyngy"]
 
 [ext_resource type="Texture2D" uid="uid://b5e62rsjsou16" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Floor/Floor - all.png" id="1_n0450"]
-[ext_resource type="Script" path="res://Scripts/Entities/raft.gd" id="2_0m7bp"]
+[ext_resource type="Script" uid="uid://cg0ge463vsq36" path="res://Scripts/Entities/raft.gd" id="2_0m7bp"]
 [ext_resource type="Texture2D" uid="uid://d1uoklk0j43te" path="res://Assets/Images/Environment/Hana Caraka - Fantasy Interior [sample]/Hana Caraka - Fantasy Interior [sample]/Structure/Structure.png" id="3_4lu7b"]
 [ext_resource type="PackedScene" uid="uid://dfprktm6sv5ds" path="res://Scenes/Entities/Ships/ShipSystems/Cannon.tscn" id="4_kquvc"]
 [ext_resource type="PackedScene" uid="uid://boqfddrphm3k8" path="res://Scenes/Entities/Ships/ShipSystems/Helm.tscn" id="5_cwmfi"]
-[ext_resource type="PackedScene" uid="uid://c6evv56odppty" path="res://Scenes/Entities/People/Enemy.tscn" id="6_0m7bp"]
+[ext_resource type="PackedScene" uid="uid://c6evv56odppty" path="res://Scenes/Entities/People/EnemyCrew.tscn" id="6_0m7bp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c04mc"]
 texture = ExtResource("1_n0450")
