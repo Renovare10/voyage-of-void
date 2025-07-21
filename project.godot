@@ -22,6 +22,10 @@ window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+selectable_player="Is it a selectable player that the player can click and drag to select."
+
 [input]
 
 ui_map_toggle={
